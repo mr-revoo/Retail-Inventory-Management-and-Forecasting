@@ -1,0 +1,129 @@
+Supplier_ID,Supplier_Name,Email,phone_number,Address
+1,ABC Suppliers,contact@abc.com,1234567890,123 Elm Street
+2,XYZ Wholesale,info@xyz.com,9876543210,456 Oak Avenue
+3,Global Imports,sales@global.com,5551234567,789 Maple Lane
+4,Home Comforts,info@homecomforts.com,1122334455,100 Garden Lane
+5,Office Pro,support@officepro.com,2233445566,200 Park Avenue
+6,Tech Innovations,contact@techinnovations.com,3344556677,300 River Road
+7,Gadget Central,sales@gadgetcentral.com,4455667788,400 Ocean Blvd
+8,Superior Supplies,info@superiorsupplies.com,5566778899,500 Hilltop Drive
+9,"Jones, Flores and Lang",karen34@example.net,861-620-2551x83,"928 Katie Heights Suite 644
+Flynnview, SC 93806"
+10,"Smith, Fields and Barton",adrienneknapp@example.net,8762332893,"0578 Elizabeth Lodge Suite 677
+Racheltown, IN 30608"
+11,"Jackson, Pruitt and Richard",hernandezregina@example.org,(443)495-9837,"840 Torres Plain
+Lake Madeline, IL 96315"
+12,Davis-Wagner,devans@example.net,4496366811,"980 Thomas Point
+Port Amy, GU 92788"
+13,Donaldson-Wells,burkejason@example.com,5912578995,"7471 Sara Hill
+Pamelaside, TX 35310"
+14,"Flynn, Sparks and Velazquez",heather68@example.org,(892)779-8462x4,"324 Christopher Drive Apt. 802
+Port Karen, SD 94746"
+15,Anderson-Romero,kyle07@example.net,895.370.2527x37,"061 Eric Groves
+Port Nathanport, PA 16138"
+16,Brown PLC,griffinrebecca@example.com,001-477-829-501,"USS Preston
+FPO AP 53088"
+17,Cochran-Brown,thomaslouis@example.com,+1-369-702-3072,"5924 Harris Crossroad Apt. 144
+Shaneshire, DC 76911"
+18,Meyer-Munoz,jmoore@example.org,(970)555-4337x1,"8055 Baxter Forks
+Smithville, KY 71681"
+19,Ortiz Ltd,cwiggins@example.org,5596957410,"11190 Tran Drives Suite 903
+Robertton, FL 94167"
+20,"Carson, Miranda and Montgomery",patelchristopher@example.org,829.626.9915x10,"108 Torres Courts
+North Cindy, TN 68949"
+21,Miller-Herrera,lori77@example.com,522-321-0442x61,"764 Rose Manor Suite 597
+Jamieville, MI 85081"
+22,"Simmons, Stephens and Scott",alexdillon@example.net,+1-986-785-6162,"91468 Stacy Island
+Michaelshire, TX 89729"
+23,"Briggs, Hobbs and Jenkins",moyerrhonda@example.net,(348)767-0958,"8213 Escobar Keys Apt. 701
+Fowlerton, SC 45084"
+24,"Coleman, Gregory and Baker",nicolehaley@example.com,7458856312,"0631 Juan Port Apt. 041
+Roberttown, SC 16838"
+25,Turner-Sanders,julia13@example.org,634-650-9391x79,"400 Knox Inlet Suite 290
+Lake Teresa, PR 33541"
+26,"Green, Salas and Hanson",kchase@example.com,565-622-4773x45,"0355 Jackson Flats Suite 396
+Vickihaven, NH 11326"
+27,Bryant PLC,wkelly@example.net,+1-988-341-3178,"6186 Martin Courts Suite 597
+East Andrea, LA 41477"
+28,Tyler-Sims,michael97@example.org,442-271-9045x55,"84077 Debbie Keys
+Lake Steven, NJ 10216"
+29,Armstrong-Smith,orasmussen@example.com,581-522-9994,"559 Huffman Divide
+New Faith, MN 60229"
+30,"Ramirez, Cabrera and Morris",oryan@example.net,505-289-5794,"280 Daniel Via
+Port Brittneyburgh, AZ 57768"
+31,"Jones, Marsh and Adams",johnburke@example.com,+1-478-287-5931,"4024 Manning Alley
+South Rachelborough, NE 18958"
+32,Robbins-Castillo,ssmith@example.net,224-903-9006x34,"976 Matthew Field Apt. 907
+Bentonmouth, PA 47891"
+33,"Stuart, Garcia and Rios",brianwoodward@example.net,(875)310-8080x5,"8364 Melissa Place
+Hansenfort, OR 31889"
+34,Bowen-Hardy,andersondavid@example.net,(208)500-5736,"374 Thomas Keys
+Princetown, NY 63906"
+35,Matthews-Gross,melissazimmerman@example.com,930.575.9731x14,"70365 Cox Village
+Gonzalezland, MO 92576"
+36,"Butler, Kennedy and Ramirez",meadowseric@example.net,001-406-771-510,"Unit 7038 Box 4079
+DPO AE 07592"
+37,Anderson Ltd,pennygordon@example.com,(583)970-0190,"84380 Lopez Locks Apt. 048
+East Josephburgh, NE 77031"
+38,Farrell-Washington,nathan46@example.com,(947)588-7375,"005 Eric Locks
+Woodhaven, GA 55451"
+39,"Singh, Smith and Kent",creyes@example.net,+1-816-334-2065,"58480 Tina Views
+New Richard, DC 64039"
+40,Haney Group,natalie13@example.org,200-226-2413x72,"481 Caitlin Wall Suite 593
+South Stephenstad, MD 37504"
+41,"Phillips, Barnes and Walker",iellis@example.org,338.830.0171x17,"56962 Crystal Spring
+Hudsonstad, MD 95088"
+42,Li-Irwin,henry42@example.com,387-534-4085,"206 Robinson Wells
+Port Deborahtown, MO 05165"
+43,Chen-Crosby,erinbauer@example.com,666.521.4370,"33555 Jacob Ferry Suite 066
+New Randallmouth, WA 87114"
+44,Hensley-Moore,amandaanderson@example.net,001-341-655-660,"13613 Wilson Oval Apt. 473
+Meadowsburgh, VI 39992"
+45,"Ross, Morgan and Hardy",wagnerfelicia@example.net,+1-684-404-3990,"850 Andrew Corner Apt. 408
+Kristafort, HI 89810"
+46,Jones Ltd,cody48@example.com,001-784-864-505,"40555 Campbell Knoll Apt. 574
+Lake Daniel, WV 64135"
+47,"Wilson, Fields and Jacobs",efields@example.org,272-614-7239,"205 Sydney Oval Apt. 084
+East Mary, NY 57163"
+48,Nelson Ltd,cbeasley@example.com,569.927.9166,"612 Adam Ways Suite 857
+Port Jillshire, NC 18422"
+49,Hutchinson Ltd,ashleegibbs@example.net,3922151348,"4517 Joshua Way Suite 520
+North Stacyville, AK 39437"
+50,"Drake, Peterson and Green",garcianicole@example.net,400.836.9026x80,"25102 Mueller Walk Suite 018
+North Douglasshire, VT 89948"
+51,Kim Inc,gregorylong@example.com,6933708151,"506 Peters Roads Suite 145
+West Angela, WV 44757"
+52,Stone LLC,xlarson@example.org,+1-336-943-7411,"7554 Thomas Land
+Bradshawborough, HI 91478"
+53,Larson Inc,amy75@example.net,(563)352-7555x6,"793 Marissa Crest Suite 753
+Port Tyler, NC 15438"
+54,Williams and Sons,laura58@example.com,001-416-990-374,"20534 Douglas Locks Suite 057
+Kevinberg, MI 51187"
+55,Daniel Ltd,christopher67@example.org,001-985-659-495,"737 Todd Gardens
+Debraborough, WY 62932"
+56,Tapia-Smith,melissawong@example.net,761.924.5675x47,"133 James Crossing
+East Melaniehaven, TN 35028"
+57,Flynn LLC,xford@example.net,344-958-5823x54,"91284 Wilson Walks
+East Donnaport, OK 96090"
+58,Taylor Group,gileskevin@example.net,795-988-4299,"42316 Nicolas Mission Apt. 006
+New Nicole, IN 09103"
+59,"Williams, Evans and Good",matthewwebb@example.com,001-759-992-397,"63280 Andrews Knoll
+West Amy, NV 56522"
+60,"Kelley, Cox and Reyes",leahbush@example.com,719.334.7754x79,"27492 Jacob Islands
+North Edwardland, AL 58230"
+61,"Miller, Taylor and Fernandez",judith51@example.org,+1-584-993-1214,"16926 Lee Prairie Suite 292
+Port Samanthachester, NV 78600"
+62,"Green, Weiss and Rogers",austindiaz@example.com,781-705-8825,"354 Kristy Tunnel Apt. 634
+Joshuaborough, MA 55052"
+63,Sharp Inc,ayalaamy@example.com,001-422-517-821,"075 Justin Rue Apt. 739
+Stephenfurt, MS 70345"
+64,Miller-Harper,fowlerlisa@example.com,318.413.1678x91,"56026 Timothy Plain Suite 497
+Burchfort, AS 51366"
+65,Brown-Douglas,jclay@example.com,(542)396-6306x9,"9526 Harry Highway Suite 997
+Port Rodney, ME 71339"
+66,"Payne, Sullivan and Roberts",mccanntanya@example.com,518.700.6004,"Unit 2944 Box 0141
+DPO AA 36956"
+67,Johnson Inc,aadams@example.org,001-465-791-453,"980 Miranda Isle
+West Virginiastad, HI 57434"
+68,Aguirre-Taylor,townsendjerry@example.com,978.645.9332x82,"997 Vanessa Path Apt. 185
+Natalieville, CA 38877"
