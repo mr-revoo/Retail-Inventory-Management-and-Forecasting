@@ -8,7 +8,7 @@ faker = Faker()
 # DataBase Connection
 conn = pyodbc.connect(
     'DRIVER={SQL Server};'
-    'SERVER=REFAAT;'
+    'SERVER=DESKTOP-7LE8BCK;'
     'DATABASE=Retail_Inventory_DB;'
 )
 cursor = conn.cursor()
@@ -208,7 +208,7 @@ populate_order_line()
 populate_sales()
 
 
-fetch_and_save_to_csv()
+# fetch_and_save_to_csv()                 # to save CSV Files
 
 
 cursor.close()
