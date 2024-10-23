@@ -9,9 +9,14 @@ faker = Faker()
 import pyodbc
 
 conn = pyodbc.connect(
-    'driver={SQL Server};',
-    'server=REFAAT;',
-    'database=Retail_Inventory_DB;'
+    'Driver={ODBC Driver 18 for SQL Server};'
+    'Server=tcp:retail-inventory-management.database.windows.net,1433;'
+    'Database=Retail_Inventory_DB;'
+    'Uid=REFAAT;'
+    'Pwd=MrRevo@#1999;'
+    'Encrypt=yes;'
+    'TrustServerCertificate=no;'
+    'Connection Timeout=30;'
 )
 
 cursor = conn.cursor()
