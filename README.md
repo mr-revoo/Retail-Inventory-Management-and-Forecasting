@@ -25,4 +25,9 @@ Deploy the forecasting model using Azure Machine Learning for automated MLOps.
 Design an intuitive dashboard to visualize inventory predictions and trends.
 ---
 ### Team Members : 
-[Refaat Mohamed]()
+[Refaat Mohamed](https://github.com/mr-revoo)
+[Mohammed Mokhtar](https://github.com/mohammedmokhtar2)
+[Mahgoub Hany](https://github.com/mahgoubhany)
+[Eyad Medhat]()
+[Mohamed Mohsen]()
+[Amr Khaled]()
