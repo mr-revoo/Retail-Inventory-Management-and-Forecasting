@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# Environment / Docker 
+.DS_Store
+
+# User Exclusions (Data)
+data/
+data/retail_data.csv
+
+# User Exclusions (Scripts)
+src/export_charts.py
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/

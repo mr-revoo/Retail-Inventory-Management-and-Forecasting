@@ -1,0 +1,213 @@
+------ HEAD ------
+   Transaction_ID  Customer_ID  ... Ratings           products
+0       8691788.0      37249.0  ...     5.0     Cycling shorts
+1       2174773.0      69749.0  ...     4.0         Lenovo Tab
+2       6679610.0      30192.0  ...     2.0   Sports equipment
+3       7232460.0      62101.0  ...     4.0      Utility knife
+4       4983775.0      27901.0  ...     1.0  Chocolate cookies
+
+[5 rows x 30 columns]
+
+------ INFO ------
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 302010 entries, 0 to 302009
+Data columns (total 30 columns):
+ #   Column            Non-Null Count   Dtype  
+---  ------            --------------   -----  
+ 0   Transaction_ID    301677 non-null  float64
+ 1   Customer_ID       301702 non-null  float64
+ 2   Name              301628 non-null  object 
+ 3   Email             301663 non-null  object 
+ 4   Phone             301648 non-null  float64
+ 5   Address           301695 non-null  object 
+ 6   City              301762 non-null  object 
+ 7   State             301729 non-null  object 
+ 8   Zipcode           301670 non-null  float64
+ 9   Country           301739 non-null  object 
+ 10  Age               301837 non-null  float64
+ 11  Gender            301693 non-null  object 
+ 12  Income            301720 non-null  object 
+ 13  Customer_Segment  301795 non-null  object 
+ 14  Date              301651 non-null  object 
+ 15  Year              301660 non-null  float64
+ 16  Month             301737 non-null  object 
+ 17  Time              301660 non-null  object 
+ 18  Total_Purchases   301649 non-null  float64
+ 19  Amount            301653 non-null  float64
+ 20  Total_Amount      301660 non-null  float64
+ 21  Product_Category  301727 non-null  object 
+ 22  Product_Brand     301729 non-null  object 
+ 23  Product_Type      302010 non-null  object 
+ 24  Feedback          301826 non-null  object 
+ 25  Shipping_Method   301673 non-null  object 
+ 26  Payment_Method    301713 non-null  object 
+ 27  Order_Status      301775 non-null  object 
+ 28  Ratings           301826 non-null  float64
+ 29  products          302010 non-null  object 
+dtypes: float64(10), object(20)
+memory usage: 69.1+ MB
+
+------ NULL COUNTS ------
+Transaction_ID      333
+Customer_ID         308
+Name                382
+Email               347
+Phone               362
+Address             315
+City                248
+State               281
+Zipcode             340
+Country             271
+Age                 173
+Gender              317
+Income              290
+Customer_Segment    215
+Date                359
+Year                350
+Month               273
+Time                350
+Total_Purchases     361
+Amount              357
+Total_Amount        350
+Product_Category    283
+Product_Brand       281
+Feedback            184
+Shipping_Method     337
+Payment_Method      297
+Order_Status        235
+Ratings             184
+dtype: int64
+
+------ DUPLICATED ROWS ------
+Duplicates: 4
+
+------ UNIQUE VALUES IN CATEGORICAL ------
+Name - Unique: 159390
+Email - Unique: 52897
+Address - Unique: 299329
+City - Unique: 130
+State - Unique: 54
+Country - Unique: 5
+Country
+USA          95223
+UK           63066
+Germany      52830
+Australia    45319
+Canada       45301
+NaN            271
+Name: count, dtype: int64
+Gender - Unique: 2
+Gender
+Male      187599
+Female    114094
+NaN          317
+Name: count, dtype: int64
+Income - Unique: 3
+Income
+Medium    130230
+Low        96261
+High       75229
+NaN          290
+Name: count, dtype: int64
+Customer_Segment - Unique: 3
+Customer_Segment
+Regular    146221
+New         91187
+Premium     64387
+NaN           215
+Name: count, dtype: int64
+Date - Unique: 366
+Month - Unique: 12
+Month
+April        41301
+January      37284
+August       33012
+July         30886
+May          28331
+March        19142
+October      19126
+December     18945
+September    18655
+November     18416
+June         18380
+February     18259
+NaN            273
+Name: count, dtype: int64
+Time - Unique: 83677
+Product_Category - Unique: 5
+Product_Category
+Electronics    71196
+Grocery        66786
+Clothing       54741
+Books          54622
+Home Decor     54382
+NaN              283
+Name: count, dtype: int64
+Product_Brand - Unique: 18
+Product_Brand
+Pepsi                30292
+Coca-Cola            18392
+Samsung              18376
+Zara                 18370
+HarperCollins        18353
+Sony                 18319
+Bed Bath & Beyond    18244
+Adidas               18238
+Home Depot           18145
+Nike                 18139
+Penguin Books        18138
+Random House         18122
+Nestle               18109
+Apple                18073
+IKEA                 17994
+Whirepool             7445
+Mitsubhisi            6724
+BlueStar              2256
+NaN                    281
+Name: count, dtype: int64
+Product_Type - Unique: 33
+Feedback - Unique: 4
+Feedback
+Excellent    100755
+Good          95098
+Average       62674
+Bad           43299
+NaN             184
+Name: count, dtype: int64
+Shipping_Method - Unique: 3
+Shipping_Method
+Same-Day    104156
+Express     102356
+Standard     95161
+NaN            337
+Name: count, dtype: int64
+Payment_Method - Unique: 4
+Payment_Method
+Credit Card    90116
+Debit Card     76790
+Cash           73810
+PayPal         60997
+NaN              297
+Name: count, dtype: int64
+Order_Status - Unique: 4
+Order_Status
+Delivered     130449
+Shipped        65024
+Processing     57199
+Pending        49103
+NaN              235
+Name: count, dtype: int64
+products - Unique: 318
+
+------ SUMMARY NUMERICS ------
+       Transaction_ID    Customer_ID  ...   Total_Amount        Ratings
+count    3.016770e+05  301702.000000  ...  301660.000000  301826.000000
+mean     5.495823e+06   55006.553934  ...    1367.651156       3.162670
+std      2.595565e+06   26005.675200  ...    1128.998515       1.320827
+min      1.000007e+06   10000.000000  ...      10.003750       1.000000
+25%      3.247930e+06   32469.250000  ...     438.724278       2.000000
+50%      5.499657e+06   55012.000000  ...    1041.117547       3.000000
+75%      7.739509e+06   77511.000000  ...    2029.999853       4.000000
+max      9.999995e+06   99999.000000  ...    4999.625796       5.000000
+
+[8 rows x 10 columns]

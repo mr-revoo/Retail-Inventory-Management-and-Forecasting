@@ -1,33 +1,84 @@
-## Retail-Inventory-Management-and-Forecasting
---- 
-### Overview
----
-Managing inventory in retail can be a balancing act. Retailers need to meet customer demands while avoiding stockouts and overstocking, both of which can negatively impact profit and customer satisfaction. This project aims to develop a Retail Inventory Management and Forecasting System to streamline inventory tracking, monitor sales, and accurately forecast future stock requirements
+# Retail Analytics Data Warehouse & BI Dashboard
 
-The system leverages SQL databases and cloud services, such as Azure, to deliver real-time inventory visibility and demand forecasting, empowering retailers to make informed decisions.
+![Revenue Trend](docs/revenue_trend.png)
+
+## Business Case & Overview
+The Retail Analytics end-to-end framework aims to process raw transactional data covering products, customers, operations, and orders, to unlock intelligent Insights for the C-Suite and regional managers. Instead of relying on manual reporting tools which cannot scale with our $300M+ revenue growth trajectory, this robust infrastructure achieves continuous data normalization, pipeline reproducibility, and powerful interactive dashboarding.
+
+### Goal
+To build a modern Start-Schema Data Warehouse on **PostgreSQL**, processing hundreds of thousands of retail transactions robustly through a containerized Python ETL pipeline and surfacing high-value Business Intelligence via a native **Streamlit/Plotly Dashboard** aligned with a Looker Studio blueprint. 
+
 ---
-### Project Arcitecture 
-##### 1. SQL Database Design and Implementation
-Design a robust, structured database schema tailored to the needs of the project.
-Populate the database with sample data to validate its functionality.
-Write SQL queries to provide insights that address critical business questions.
-##### 2. Data Warehousing and Python Integration
-Build a centralized data warehouse to consolidate data from multiple sources.
-Implement automated ETL processes to efficiently manage data flow into the warehouse.
-Clean and preprocess raw data to prepare it for deep analysis.
-##### 3. Forecasting and Analysis
-Develop a forecasting model that leverages historical sales and inventory data to predict future demand.
-Utilize Azure services for data storage and analysis to extract actionable insights.
-Test and validate the forecasting model rigorously to ensure accuracy and reliability.
-##### 4. MLOps and Deployment
-Use MLflow to track and manage machine learning models throughout their lifecycle.
-Deploy the forecasting model using Azure Machine Learning for automated MLOps.
-Design an intuitive dashboard to visualize inventory predictions and trends.
+
+## 📊 Dashboard Metrics Deep-Dive
+
+The analytical workspace is broken down into three distinct areas, meticulously tracking both P&L growth and Operational efficiencies:
+
+![Revenue by Category](docs/revenue_category.png)
+
+### 1. Executive Summary
+- **KPI Scorecards:** Total Revenue, Total Transactions (Volume), Average Order Value (AOV), Unique Customer footprints, and overall Sentiment.
+- **Reporting Visulas:** 
+   - **Monthly Growth Curve:** Monitoring seasonal influx.
+   - **Category Distribution (Bar Chart):** Identifying our most profitable product vertices.
+   - **Order Dispatch Health (Donut):** Status mix of Delivered vs. Processing orders.
+
+### 2. Customer Intelligence
+Focuses exclusively on long-term behavioral profiles and predictive segmentations.
+- **Customer Lifetime Value (LTV) & VIP Status:** Tiering customers into VIP/Platinum, Gold, Silver bands based on longitudinal spend.
+- **Repeat Purchase Cohorts:** Analyzing loyalty mechanics and tracking demographic age group correlations mapping Income vs. Spend.
+
+![Customer Segmentation](docs/customer_segments.png)
+
+### 3. Operations & Logistics
+- Evaluates the "cost to serve" and real-world supply chain metrics.
+- Computes metrics on **Delivery Rate**, **Cancellations**, and **Same-Day volume**.
+- Includes dense Heatmaps to pinpoint operational bottlenecks per specific Shipping methods vs. internal Order Status transitions.
+
 ---
-### Team Members : 
-[Refaat Mohamed](https://github.com/mr-revoo)
-[Mohammed Mokhtar](https://github.com/mohammedmokhtar2)
-[Mahgoub Hany](https://github.com/mahgoubhany)
-[Eyad Medhat]()
-[Mohamed Mohsen]()
-[Amr Khaled]()
+
+## 🏗 System Architecture (ETL & Docker)
+
+We follow a unified **Extract → Transform → Load** (ETL) strategy enforcing Idempotency:
+
+- **Extract:** Raw CSV reading `retail_data.csv`.
+- **Clean/Validate:** Robust null inference via modes/medians, type-casting, typo fixes (e.g., standardizing brands), and Date extraction (Day of Week, Quarters).
+- **Transform (Star Schema Modeling):** 
+   - **Fact Table (`fact_transactions`):** Transactional mapping, pricing boundaries, status boolean flags.
+   - **Dimension Tables:** `dim_customers`, `dim_products`, `dim_geography`, `dim_logistics`. LTV and NPS metrics are computed securely.
+- **Load:** Streamed idempotently into **PostgreSQL** (Drops gracefully if run multiple times).
+
+---
+
+## 🚀 Guide to Run the Project
+
+This project leverages Docker Compose to achieve zero-config deployments. Everything will initialize automatically. Ensure Docker is installed on your OS.
+
+### 1. Build and Run the Stack
+From your terminal root simply run:
+```bash
+docker-compose up --build -d
+```
+*What happens under the hood?*
+1. Docker provisions a bare-metal PostgreSQL 15 database. 
+2. The `app` container constructs the Python 3.11 environment.
+3. Our bash `entrypoint.sh` blocks startup until postgres is receptive.
+4. Python runs the robust `src/etl.py` Data Pipeline.
+5. Streamlit binds to port 8501 and begins executing `src/app.py`.
+
+### 2. Monitor Initial Setup
+The ETL pipeline processes ~300,000 rows. You can track this process robustly via unified logs:
+```bash
+docker-compose logs -f
+```
+
+### 3. Access the BI Dashboard
+Once the Streamlit service acknowledges a successful boot, open your favorite web browser and navigate to:
+**http://localhost:8501/ **
+
+### 4. Cleanup
+To stop the application cleanly and free your terminal:
+```bash
+docker-compose down
+```
+*(Volumes persist automatically via the configured `postgres_data` volume)*
